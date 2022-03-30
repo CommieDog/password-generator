@@ -57,21 +57,26 @@ function generatePassword()
 
     function populatePasswordCharAtlas()
     {
+        const lowercaseAtlas = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        const uppercaseAtlas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        const numeralAtlas = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        const specialCharAtlas = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~" ];
+
         if(window.confirm("Should the password contain lowercase letters?\nOK for yes, Cancel for no"))
         {
-            passwordCharAtlas = passwordCharAtlas.concat(["a", "b", "c", "d"]);
+            passwordCharAtlas = passwordCharAtlas.concat(lowercaseAtlas);
         }
         if(window.confirm("Should the password contain uppercase letters?\nOK for yes, Cancel for no"))
         {
-            passwordCharAtlas = passwordCharAtlas.concat(["A", "B", "C", "D"]);
+            passwordCharAtlas = passwordCharAtlas.concat(uppercaseAtlas);
         }
         if(window.confirm("Should the password contain numerals?\nOK for yes, Cancel for no"))
         {
-            passwordCharAtlas = passwordCharAtlas.concat(["1", "2", "3", "4"]);
+            passwordCharAtlas = passwordCharAtlas.concat(numeralAtlas);
         }
         if(window.confirm("Should the password contain special characters?\nOK for yes, Cancel for no"))
         {
-            passwordCharAtlas = passwordCharAtlas.concat(["!", "@", "#", "$"]);
+            passwordCharAtlas = passwordCharAtlas.concat(specialCharAtlas);
         }
     }
 
