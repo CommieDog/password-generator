@@ -100,7 +100,9 @@ function generatePassword()
 
         function getRandomPasswordChar()
         {
-            return "*"
+            var index = Math.random() * passwordCharAtlas.length; // potential values range from 0 (inclusive) to passwordLength (exclusive)
+            index = Math.floor(index); // Math.round(index) would produce an uneven distribution of potential indexes
+            return passwordCharAtlas[index];
         }
     }
 }
