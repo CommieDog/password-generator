@@ -5,12 +5,16 @@ function generatePassword()
 
     passwordLength = window.prompt("Enter the length of your password:\nNote: length must be between 8 and 128 characters");
     passwordLength = Number.parseInt(passwordLength);
-    if(!verifyPasswordLength())
+    if(! verifyPasswordLength())
     {
         return; // Can't do anything else without a password length
     }
 
     populatePasswordCharAtlas();
+    if(! validatePasswordCharAtlas())
+    {
+        return; // Can't do anything else without at some possible password characters either
+    }
     window.alert("The character atlas is:\n" + passwordCharAtlas);
 
     window.alert("Random number chosen is: " + Math.random());
@@ -57,7 +61,6 @@ function generatePassword()
         {
             passwordCharAtlas = passwordCharAtlas.concat(["a", "b", "c", "d"]);
         }
-        console.log(passwordCharAtlas);
         if(window.confirm("Should the password contain uppercase letters?\nOK for yes, Cancel for no"))
         {
             passwordCharAtlas = passwordCharAtlas.concat(["A", "B", "C", "D"]);
@@ -70,5 +73,15 @@ function generatePassword()
         {
             passwordCharAtlas = passwordCharAtlas.concat(["!", "@", "#", "$"]);
         }
+    }
+
+    function validatePasswordCharAtlas()
+    {
+        var isValid = passwordCharAtlas.length > 0;
+        if(!isValid)
+        {
+            window.alert("At least one set of characters must be chosen.\nTry again.");
+        }
+        return isValid;
     }
 }
