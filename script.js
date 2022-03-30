@@ -6,8 +6,10 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
+  if(password) // make sure there's a valid password ready before resetting the displayed password
+  {
+    passwordText.value = password;
+  }
 }
 
 // Add event listener to generate button
