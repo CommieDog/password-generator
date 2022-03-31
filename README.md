@@ -1,12 +1,14 @@
 # Password Generator
+A webpage that generates random passwords based on user input
+
 
 ## Introduction 
 
-This is a personal project of mine, undertaken with an eye towards potential employers. I created this webpage to showcase my ability to create a basic, single-page website from scratch. In addition to serving as a brief introduction to other projects of mine, this webpage demonstrates my ability to use and include modern features such as semantic HTML and CSS media queries in a website.
+This project is a tech demo of basic JavaScript functionality and a relief for those who can't come up with strong passwords on their own. It consists of a simple website with basic styling that invites the user to press a button in order to generate a password. The website prompts the user to enter a few basic parameters and displays the resulting password for the user to write down (or try to commit to memory only to forget at an inconvienient time).
 
-![Screenshot of final product.](https://github.com/CommieDog/my-portfolio/blob/main/assets/images/readme/my-portfolio-website-screenshot.jpg)
+![Screenshot of final product.](https://github.com/CommieDog/password-generator/blob/main/assets/images/readme/password-generator-website-screenshot.jpg)
 
-A sample deployment of the website is available on [GitHub Pages](https://commiedog.github.io/my-portfolio/).
+A sample deployment of the website is available on [GitHub Pages](https://commiedog.github.io/password-generator/).
 
 
 ## Table of Contents
