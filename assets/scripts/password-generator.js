@@ -26,36 +26,36 @@ function generatePassword()
     function verifyPasswordLength()
     {
         return isPasswordLengthNumber() && isPasswordLengthMinimum() && isPasswordLengthMaximum();
-    }
 
-    function isPasswordLengthNumber()
-    {
-        var isValid = Number.isSafeInteger(passwordLength);
-        if(!isValid)
+        function isPasswordLengthNumber()
         {
-            window.alert("Password length must be a number.\nTry again.");
+            var isValid = Number.isSafeInteger(passwordLength);
+            if(!isValid)
+            {
+                window.alert("Password length must be a number.\nTry again.");
+            }
+            return isValid;
         }
-        return isValid;
-    }
 
-    function isPasswordLengthMinimum()
-    {
-        var isValid = passwordLength >= 8;
-        if(!isValid)
+        function isPasswordLengthMinimum()
         {
-            window.alert("Password length must be at least 8.\nTry again.");
+            var isValid = passwordLength >= 8;
+            if(!isValid)
+            {
+                window.alert("Password length must be at least 8.\nTry again.");
+            }
+            return isValid;
         }
-        return isValid;
-    }
 
-    function isPasswordLengthMaximum()
-    {
-        var isValid = passwordLength <= 128;
-        if(!isValid)
+        function isPasswordLengthMaximum()
         {
-            window.alert("Password length must be no more than 128.\nTry again.");
+            var isValid = passwordLength <= 128;
+            if(!isValid)
+            {
+                window.alert("Password length must be no more than 128.\nTry again.");
+            }
+            return isValid;
         }
-        return isValid;
     }
 
     function populatePasswordCharAtlas()
