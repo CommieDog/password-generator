@@ -1,3 +1,7 @@
+/**
+ * Collects all parameters necessary to generate a password from dialog boxes presented to the user and generates a random password conforming to that input
+ * @returns a string suitable for use as a password
+ */
 function generatePassword()
 {
     passwordLength;
@@ -17,16 +21,27 @@ function generatePassword()
     
     return buildPassword();
 
+    /**
+     * Asks the user for the desired password length via a browser pop-up window
+     */
     function getPasswordLengthFromUser()
     {
         passwordLength = window.prompt("Enter the length of your password:\nNote: length must be between 8 and 128 characters");
         passwordLength = Number.parseInt(passwordLength);
     }
 
+    /**
+     * Verifies the user's desired password length against the constraints called for in the design
+     * @returns true if the password length is a valid value, false otherwise
+     */
     function verifyPasswordLength()
     {
         return isPasswordLengthNumber() && isPasswordLengthMinimum() && isPasswordLengthMaximum();
 
+        /**
+         * Verifies the user's desired password length against the requirement that it be a number
+         * @returns true if the password length is a number, false otherwise
+         */
         function isPasswordLengthNumber()
         {
             isValid = Number.isSafeInteger(passwordLength);
@@ -37,6 +52,10 @@ function generatePassword()
             return isValid;
         }
 
+        /**
+         * Verifies the user's desired password length against the requirement that it be at least 8 characters long
+         * @returns true if the password length is at least 8 characters, false otherwise
+         */
         function isPasswordLengthMinimum()
         {
             isValid = passwordLength >= 8;
@@ -47,6 +66,10 @@ function generatePassword()
             return isValid;
         }
 
+        /**
+         * Verifies the user's desired password length against the requirement that it be at most 128 characters long
+         * @returns true if the password length is at most 128 characters, false otherwise
+         */
         function isPasswordLengthMaximum()
         {
             isValid = passwordLength <= 128;
@@ -58,6 +81,9 @@ function generatePassword()
         }
     }
 
+    /**
+     * Asks the user for the desired character set(s) to use to generate the password via browser windows
+     */
     function populatePasswordCharAtlas()
     {
         // These 4 arrays hold all possible password characters and are grouped so users can select some sets and exclude others
@@ -84,6 +110,10 @@ function generatePassword()
         }
     }
 
+    /**
+     * Verifies the user's desired password character set(s) against the requirement that it use at least one character set
+     * @returns true if the password has at least one available character to draw from, false otherwise
+     */
     function validatePasswordCharAtlas()
     {
         isValid = passwordCharAtlas.length > 0;
@@ -94,6 +124,10 @@ function generatePassword()
         return isValid;
     }
 
+    /**
+     * Constructs a randomly-generated password string based on previous user input.
+     * @returns a password meeting the user's specified criteria
+     */
     function buildPassword()
     {
         password = "";
@@ -104,6 +138,10 @@ function generatePassword()
         }
         return password;
 
+        /**
+         * Selects a random character that meets the user's character set rquirement input
+         * @returns a single-character string
+         */
         function getRandomPasswordChar()
         {
             index = Math.random() * passwordCharAtlas.length; // potential values range from 0 (inclusive) to passwordLength (exclusive)
