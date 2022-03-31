@@ -1,7 +1,7 @@
 function generatePassword()
 {
-    var passwordLength;
-    var passwordCharAtlas = [];
+    passwordLength;
+    passwordCharAtlas = [];
 
     getPasswordLengthFromUser()
     if(! verifyPasswordLength())
@@ -29,7 +29,7 @@ function generatePassword()
 
         function isPasswordLengthNumber()
         {
-            var isValid = Number.isSafeInteger(passwordLength);
+            isValid = Number.isSafeInteger(passwordLength);
             if(!isValid)
             {
                 window.alert("Password length must be a number.\nTry again.");
@@ -39,7 +39,7 @@ function generatePassword()
 
         function isPasswordLengthMinimum()
         {
-            var isValid = passwordLength >= 8;
+            isValid = passwordLength >= 8;
             if(!isValid)
             {
                 window.alert("Password length must be at least 8.\nTry again.");
@@ -49,7 +49,7 @@ function generatePassword()
 
         function isPasswordLengthMaximum()
         {
-            var isValid = passwordLength <= 128;
+            isValid = passwordLength <= 128;
             if(!isValid)
             {
                 window.alert("Password length must be no more than 128.\nTry again.");
@@ -86,7 +86,7 @@ function generatePassword()
 
     function validatePasswordCharAtlas()
     {
-        var isValid = passwordCharAtlas.length > 0;
+        isValid = passwordCharAtlas.length > 0;
         if(!isValid)
         {
             window.alert("At least one set of characters must be chosen.\nTry again.");
@@ -96,9 +96,9 @@ function generatePassword()
 
     function buildPassword()
     {
-        var password = "";
+        password = "";
 
-        for(var i = 0; i < passwordLength; i++)
+        for(i = 0; i < passwordLength; i++)
         {
             password = password.concat(getRandomPasswordChar()); // Build the password one character at a time
         }
@@ -106,7 +106,7 @@ function generatePassword()
 
         function getRandomPasswordChar()
         {
-            var index = Math.random() * passwordCharAtlas.length; // potential values range from 0 (inclusive) to passwordLength (exclusive)
+            index = Math.random() * passwordCharAtlas.length; // potential values range from 0 (inclusive) to passwordLength (exclusive)
             index = Math.floor(index); // Math.round(index) would produce an uneven distribution of potential indexes
             return passwordCharAtlas[index];
         }
