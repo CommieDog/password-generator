@@ -4,8 +4,8 @@
  */
 function generatePassword()
 {
-    passwordLength;
-    passwordCharAtlas = [];
+    var passwordLength;
+    var passwordCharAtlas = [];
 
     getPasswordLengthFromUser()
     if(! verifyPasswordLength())
