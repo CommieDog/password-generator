@@ -56,16 +56,23 @@ function buildPassword()
 
 ## Features
 
+* Use of `alert()`, `confirm()`, and `prompt()` for user interactivity
+* Generate passwords of varied lengths
+* Generate passwords from different characters to balance ease of memorization against need for complexity
+* Immediate validation of user input to minimize wasting users' time
+* Use of built-in JavaScript `Math` methods
 
 
 ## Technologies Used
 
 * HTML
 * CSS
+* JavaScript
 
 
 ## Future Work
 
+The current method of user interface (dialog boxes) can be cumbersome, particularly if the user wants a series of passwords with the same paramaters. A persistent form layout displaying parameters would make entering new parameters easier, elimiate the need for repetition, and make the webpage a bit more visually appealing as well.
 
 
 ## License
