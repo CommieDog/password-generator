@@ -1,4 +1,5 @@
 # Password Generator
+
 A webpage that generates random passwords based on user input
 
 
@@ -17,6 +18,7 @@ A sample deployment of the website is available on [GitHub Pages](https://commie
 * [Features](#features)
 * [Technologies Used](#technologies-used)
 * [Future Work](#future-work)
+* [Author](#author)
 * [License](#license)
 
 
@@ -75,4 +77,12 @@ function buildPassword()
 The current method of user interface (dialog boxes) can be cumbersome, particularly if the user wants a series of passwords with the same paramaters. A persistent form layout displaying parameters would make entering new parameters easier, elimiate the need for repetition, and make the webpage a bit more visually appealing as well.
 
 
+## Author
+
+John Netzel
+* [Portfolio](https://commiedog.github.io/my-portfolio/)
+* [LinkedIn](https://www.linkedin.com/in/john-netzel-481112129/)
+* [GitHub](https://github.com/CommieDog)
+
 ## License
+&copy; 2022 John Netzel. All Rights Reserved.
