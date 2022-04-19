@@ -86,3 +86,5 @@ John Netzel
 
 ## License
 &copy; 2022 John Netzel. All Rights Reserved.
+
+Licensed under the [MIT](LICENSE) License.
